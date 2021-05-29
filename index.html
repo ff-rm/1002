@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>ArrayofOSC </title>
+
+   <script type="text/javascript" src="../Tone.js"></script>
+   <!-- <script type="text/javascript" src="../../p5.js"></script>
+   <script type="text/javascript" src="../../p5.min.js"></script> -->
+   <script src="oscs.js"></script>
+</head>
+<body>
+
+<button onclick="startbuttonfunction()">start me up!</button>
+<br>
+<br>
+<button onclick="stopbuttonfunction()">STOPIT!</button>
+<br>
+<br>
+<button onclick="randombaseFreq()">random</button>
+<br>
+<br>
+<input type="range" oninput="set_harmonicity(this.value)" min="0.5" max="2" value="1">
+<output id="output1"></output>
+</body>
+</html>
