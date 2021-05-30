@@ -23,9 +23,9 @@ function startbuttonfunction() {
 
 function stopbuttonfunction() {
   for(o of osciladores){
-    o.volume.rampTo(-Infinity, 3);
-    // o.stop(); //ver como hacer que se detenga después e que termine la rampa para evitar corte de Audio
-}
+    o.volume.rampTo(-Infinity, 3)
+	if(o.volume.value == -100) {o.stop()}}//este if no está funcionando no se bien porque
+
 };
 
 function randombaseFreq(){
@@ -59,4 +59,11 @@ function sawtoothbuttonfunction(){
 	for(o of osciladores){
 		o.type ="sawtooth4"
 	}
+	}
+
+	function set_vol(vval) {
+		osciladores.forEach((o, i) => {
+			o.volume.rampTo(vval, 0.1);
+			document.getElementById('volume').innerHTML = vval;
+		});
 	}
