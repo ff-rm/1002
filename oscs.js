@@ -18,8 +18,8 @@ function startbuttonfunction() {
   for(o of osciladores){
     o.start()
     o.volume.rampTo(-20, 3);
-;}
 }
+};
 
 function stopbuttonfunction() {
   for(o of osciladores){
