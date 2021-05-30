@@ -25,19 +25,37 @@ function stopbuttonfunction() {
   for(o of osciladores){
     o.volume.rampTo(-Infinity, 3);
     // o.stop(); //ver como hacer que se detenga después e que termine la rampa para evitar corte de Audio
-};
+}
 };
 
 function randombaseFreq(){
   var freq = Math.random() * (100 - 20) + 20; //reemplazar por una de las variables del XYZ
-  console.log(freq);
   var paneo = Math.random() * 2 - 1; //reemplazar por una de las variables del XYZ
-  console.log(paneo);
   for(o of osciladores){
     o.frequency.rampTo(freq, 1);
-    o.type = "triangle";
-    console.log(o.type);
     pan.pan.rampTo(paneo, 0.5);
 
   }
+};
+
+function sinebuttonfunction(){
+	for(o of osciladores){
+		o.type = "sine";
+	}
+};
+
+function trianglebuttonfunction(){
+	for(o of osciladores){
+		o.type = "triangle";
+	};
+function squarebuttonfunction(){
+	for(o of osciladores){
+		o.type = "square";
+	}
+};
+
+function sawtoothbuttonfunction(){
+	for(o of osciladores){
+		o.type = "sawtooth"
+	}
 }
