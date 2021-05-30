@@ -1,5 +1,6 @@
 const osciladores = [];
 var freqBase = 24;
+const types = ["sine4", "triangle4", "square4", "sawtooth4" ]
 
 //const pingPong = new Tone.PingPongDelay("4n", 0.2).toDestination();
 	const pan = new Tone.Panner(1).toDestination();
@@ -34,6 +35,7 @@ function randombaseFreq(){
   for(o of osciladores){
     o.frequency.rampTo(freq, 1);
     pan.pan.rampTo(paneo, 0.5);
+		o.type = types[Math.random() * types.length]
 }
 };
 
