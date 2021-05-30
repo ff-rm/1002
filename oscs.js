@@ -5,7 +5,7 @@ var freqBase = 24;
 	const pan = new Tone.Panner(1).toDestination();
 
 
-for (let i = 0; i < 16; i++) {
+for (let i = 0; i < 8; i++) {
     osciladores.push(new Tone.Oscillator({
       frequency: freqBase * i,
       type: "sawtooth4",
@@ -29,33 +29,34 @@ function stopbuttonfunction() {
 };
 
 function randombaseFreq(){
-  var freq = Math.random() * (100 - 20) + 20; //reemplazar por una de las variables del XYZ
+  var freq = Math.random() * (300 - 30) + 30; //reemplazar por una de las variables del XYZ
   var paneo = Math.random() * 2 - 1; //reemplazar por una de las variables del XYZ
   for(o of osciladores){
     o.frequency.rampTo(freq, 1);
     pan.pan.rampTo(paneo, 0.5);
-
-  }
+}
 };
 
 function sinebuttonfunction(){
 	for(o of osciladores){
-		o.type = "sine";
+		o.type ="sine4"
 	}
-};
+	}
 
 function trianglebuttonfunction(){
 	for(o of osciladores){
-		o.type = "triangle";
-	};
+		o.type ="triangle4"
+	}
+	}
+
 function squarebuttonfunction(){
 	for(o of osciladores){
-		o.type = "square";
+		o.type ="square4"
 	}
-};
+	}
 
 function sawtoothbuttonfunction(){
 	for(o of osciladores){
-		o.type = "sawtooth"
+		o.type ="sawtooth4"
 	}
-}
+	}
