@@ -35,7 +35,7 @@ function randombaseFreq(){
   for(o of osciladores){
     o.frequency.rampTo(freq, 1);
     pan.pan.rampTo(paneo, 0.5);
-		o.type = types[Math.random() * types.length]
+		console.log(tipo);
 }
 };
 
