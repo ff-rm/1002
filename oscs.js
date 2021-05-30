@@ -17,7 +17,7 @@ for (let i = 0; i < 8; i++) {
 function startbuttonfunction() {
   for(o of osciladores){
     o.start()
-    o.volume.rampTo(-20, 3);
+    o.volume.rampTo(-20, 1);
 }
 };
 
